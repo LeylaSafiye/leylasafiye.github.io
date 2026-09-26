@@ -421,3 +421,8 @@ footer {
   }
 
 }
+/* TEST PHOTO STYLE */
+
+.hero-photo img {
+  border-radius: 50%;
+}
