@@ -1,4 +1,8 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
+
+
+/* RESET */
 
 * {
   box-sizing: border-box;
@@ -17,10 +21,14 @@ body {
   line-height: 1.6;
 }
 
+
+/* NAVIGATION */
+
 nav {
   max-width: 1200px;
   margin: auto;
   padding: 32px 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +56,9 @@ nav {
   opacity: 0.5;
 }
 
+
+/* MAIN LAYOUT */
+
 main {
   max-width: 1200px;
   margin: auto;
@@ -59,11 +70,27 @@ section {
   border-bottom: 1px solid #d9d8d3;
 }
 
+
+/* HERO */
+
 .hero {
-  min-height: 80vh;
+  min-height: 82vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-text {
+  min-width: 0;
 }
 
 .eyebrow,
@@ -77,34 +104,67 @@ section {
 
 .hero h1 {
   font-family: "Manrope", sans-serif;
-  font-size: clamp(70px, 11vw, 145px);
+
+  font-size: clamp(65px, 9vw, 125px);
   font-weight: 500;
+
   letter-spacing: -0.07em;
-  line-height: 0.88;
+  line-height: 0.9;
+
   margin: 25px 0 40px;
 }
 
 .intro {
-  max-width: 580px;
+  max-width: 560px;
   font-size: 21px;
   color: #555;
 }
 
 .hero-links {
   margin-top: 45px;
+
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
+
+/* PROFILE PHOTO */
+
+.hero-photo {
+  width: 100%;
+  max-width: 380px;
+  justify-self: end;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 4px;
+}
+
+
+/* BUTTONS */
+
 .button {
   display: inline-block;
+
   padding: 14px 22px;
+
   background: #171717;
   color: white;
+
   text-decoration: none;
   border-radius: 100px;
+
   font-size: 14px;
+
   transition: 0.2s;
 }
 
@@ -119,22 +179,32 @@ section {
   font-size: 14px;
 }
 
+
+/* SECTION HEADINGS */
+
 .section-label {
   margin-bottom: 55px;
 }
 
 section h2 {
   font-family: "Manrope", sans-serif;
+
   font-size: clamp(42px, 6vw, 72px);
   line-height: 1.05;
+
   letter-spacing: -0.045em;
   font-weight: 500;
+
   margin-bottom: 60px;
 }
+
+
+/* ABOUT */
 
 .section-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 90px;
 }
 
@@ -148,23 +218,32 @@ section h2 {
   color: #555;
 }
 
+
+/* EXPERIENCE */
+
 .experience-list {
   border-top: 1px solid #d9d8d3;
 }
 
 .experience-item {
   display: grid;
+
   grid-template-columns: 0.8fr 1.2fr;
+
   gap: 80px;
+
   padding: 45px 0;
+
   border-bottom: 1px solid #d9d8d3;
 }
 
 .experience-item h3,
 .education-card h3 {
   font-family: "Manrope", sans-serif;
+
   font-size: 30px;
   font-weight: 500;
+
   margin-top: 10px;
 }
 
@@ -172,6 +251,7 @@ section h2 {
 .education-card h4 {
   font-size: 17px;
   font-weight: 500;
+
   margin-bottom: 15px;
 }
 
@@ -181,25 +261,40 @@ section h2 {
   max-width: 600px;
 }
 
+
+/* EDUCATION */
+
 .education-card {
   padding: 45px 0;
+
   border-top: 1px solid #d9d8d3;
   border-bottom: 1px solid #d9d8d3;
 }
 
+
+/* SKILLS + LANGUAGES */
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
+
   gap: 12px;
+
   align-content: flex-start;
 }
 
 .skill-list span {
   border: 1px solid #bdbcb7;
+
   border-radius: 100px;
+
   padding: 10px 18px;
+
   font-size: 14px;
 }
+
+
+/* CONTACT */
 
 .contact {
   min-height: 65vh;
@@ -207,20 +302,35 @@ section h2 {
 
 .contact > p:not(.section-label) {
   max-width: 550px;
+
   font-size: 19px;
+
   color: #555;
+
   margin-bottom: 35px;
 }
 
+
+/* FOOTER */
+
 footer {
   max-width: 1200px;
+
   margin: auto;
+
   padding: 35px 40px 50px;
+
   display: flex;
+
   justify-content: space-between;
+
   color: #777;
+
   font-size: 12px;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -244,8 +354,17 @@ footer {
     padding: 80px 0;
   }
 
+
+  /* HERO MOBILE */
+
   .hero {
-    min-height: 75vh;
+    min-height: auto;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
   }
 
   .hero h1 {
@@ -256,111 +375,6 @@ footer {
     font-size: 18px;
   }
 
-  .section-grid,
-  .experience-item {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hero-links {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  footer {
-    padding: 30px 20px;
-    flex-direction: column;
-    gap: 8px;
-  }
-  /* HERO WITH PORTRAIT */
-
-.hero-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.hero-text {
-  min-width: 0;
-}
-
-.hero-photo {
-  width: 100%;
-  max-width: 380px;
-  justify-self: end;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 500px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-}
-
-
-/* PHONE */
-
-@media (max-width: 700px) {
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .hero-photo {
-    max-width: 100%;
-    justify-self: start;
-  }
-
-  .hero-photo img {
-    height: 460px;
-  }
-
-}
-}
-/* PROFILE PHOTO + HERO LAYOUT */
-
-.hero-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.hero-text {
-  min-width: 0;
-}
-
-.hero-photo {
-  width: 100%;
-  max-width: 380px;
-  justify-self: end;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 500px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-}
-
-
-/* MOBILE VERSION */
-
-@media (max-width: 700px) {
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .hero-photo {
     max-width: 100%;
     justify-self: start;
@@ -368,6 +382,31 @@ footer {
 
   .hero-photo img {
     height: 450px;
+  }
+
+  .hero-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  /* OTHER SECTIONS */
+
+  .section-grid,
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 30px 20px;
+
+    flex-direction: column;
+
+    gap: 8px;
   }
 
 }
