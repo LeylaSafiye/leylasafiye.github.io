@@ -131,34 +131,35 @@ section {
 
 /* PROFILE PHOTO */
 
-.hero-photo {
-  width: 100%;
-  max-width: 400px;
-  justify-self: end;
-  position: relative;
-}
-
 .hero-photo img {
   width: 100%;
   height: 500px;
   display: block;
+
   object-fit: cover;
   object-position: center;
 
-  /* Softly blend photo into background */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 72%,
+  /* Large soft fade on every edge + corner */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 35%,
+    black 48%,
+    rgba(0, 0, 0, 0.9) 58%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.25) 82%,
     transparent 100%
   );
 
-  mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 72%,
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 35%,
+    black 48%,
+    rgba(0, 0, 0, 0.9) 58%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.25) 82%,
     transparent 100%
   );
+}
 }
 
 
