@@ -411,6 +411,20 @@ footer {
 
     gap: 8px;
   }
+  /* PINK ACCENTS */
 
+.eyebrow {
+  color: #c9878f;
 }
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #c9878f;
+  opacity: 1;
+}
+
+
 
