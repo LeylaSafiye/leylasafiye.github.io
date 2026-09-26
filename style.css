@@ -139,25 +139,17 @@ section {
   object-fit: cover;
   object-position: center;
 
-  -webkit-mask-image: radial-gradient(
-    ellipse 75% 75% at center,
-    #000 25%,
-    #000 40%,
-    rgba(0, 0, 0, 0.85) 52%,
-    rgba(0, 0, 0, 0.55) 65%,
-    rgba(0, 0, 0, 0.2) 78%,
-    transparent 100%
-  );
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 72%, transparent 100%);
 
-  mask-image: radial-gradient(
-    ellipse 75% 75% at center,
-    #000 25%,
-    #000 40%,
-    rgba(0, 0, 0, 0.85) 52%,
-    rgba(0, 0, 0, 0.55) 65%,
-    rgba(0, 0, 0, 0.2) 78%,
-    transparent 100%
-  );
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 72%, transparent 100%);
+
+  mask-composite: intersect;
 }
 
 
@@ -421,8 +413,4 @@ footer {
   }
 
 }
-/* TEST PHOTO STYLE */
 
-.hero-photo img {
-  border-radius: 50%;
-}
