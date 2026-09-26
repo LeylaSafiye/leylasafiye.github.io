@@ -401,17 +401,18 @@ footer {
     gap: 30px;
   }
 
+/* FOOTER */
 
-  /* FOOTER */
+footer {
+  padding: 30px 20px;
+  flex-direction: column;
+  gap: 8px;
+}
 
-  footer {
-    padding: 30px 20px;
+} /* closes the mobile @media section */
 
-    flex-direction: column;
 
-    gap: 8px;
-  }
-  /* PINK ACCENTS */
+/* PINK ACCENTS */
 
 .eyebrow {
   color: #c9878f;
@@ -425,6 +426,5 @@ footer {
   color: #c9878f;
   opacity: 1;
 }
-
 
 
