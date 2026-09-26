@@ -272,4 +272,53 @@ footer {
     flex-direction: column;
     gap: 8px;
   }
+  /* HERO WITH PORTRAIT */
+
+.hero-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 380px;
+  justify-self: end;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 500px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+
+/* PHONE */
+
+@media (max-width: 700px) {
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero-photo {
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .hero-photo img {
+    height: 460px;
+  }
+
+}
 }
