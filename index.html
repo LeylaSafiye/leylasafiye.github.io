@@ -1,49 +1,334 @@
-/* HERO WITH PORTRAIT */
+<!DOCTYPE html>
+<html lang="en">
 
-.hero-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 70px;
-  align-items: center;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.hero-text {
-  min-width: 0;
-}
+  <title>Leyla Safiye Karatay</title>
 
-.hero-photo {
-  width: 100%;
-  max-width: 380px;
-  justify-self: end;
-}
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.hero-photo img {
-  width: 100%;
-  height: 500px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-}
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home" class="logo">LSK</a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
 
-/* PHONE */
+  <main>
 
-@media (max-width: 700px) {
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
+      <div class="hero-content">
 
-  .hero-photo {
-    max-width: 100%;
-    justify-self: start;
-  }
+        <div class="hero-text">
 
-  .hero-photo img {
-    height: 460px;
-  }
+          <p class="eyebrow">
+            PSYCHOLOGY · RESEARCH · TECHNOLOGY
+          </p>
 
-}
+          <h1>
+            Hi, I'm<br>
+            Leyla Safiye.
+          </h1>
+
+          <p class="intro">
+            I'm a Psychology student based in London with an interest in
+            human behaviour, research and technology.
+          </p>
+
+          <div class="hero-links">
+
+            <a href="#experience" class="button">
+              Explore my experience
+            </a>
+
+            <a href="#about" class="text-link">
+              More about me →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROFILE PHOTO -->
+        <div class="hero-photo">
+          <img
+            src="GitHub pic of me.JPG"
+            alt="Leyla Safiye Karatay"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+      <p class="section-label">
+        01 / ABOUT
+      </p>
+
+      <div class="section-grid">
+
+        <h2>
+          Curious about people.<br>
+          Excited by technology.
+        </h2>
+
+        <div>
+
+          <p>
+            I'm Leyla Safiye Karatay, a Psychology student at the
+            University of Westminster.
+          </p>
+
+          <p>
+            I'm especially interested in understanding how people think,
+            behave and interact with technology. I enjoy research,
+            learning new skills and finding ways to combine psychology
+            with the digital world.
+          </p>
+
+          <p>
+            Alongside university, I've been building experience across
+            research, technology, student leadership and creative work.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+
+      <p class="section-label">
+        02 / EXPERIENCE
+      </p>
+
+      <h2>
+        What I've been working on.
+      </h2>
+
+
+      <div class="experience-list">
+
+
+        <!-- ADOBE -->
+        <article class="experience-item">
+
+          <div>
+            <p class="year">
+              2026 — PRESENT
+            </p>
+
+            <h3>
+              Adobe
+            </h3>
+          </div>
+
+          <div>
+            <h4>
+              Student Ambassador
+            </h4>
+
+            <p>
+              Supporting student engagement with Adobe and helping bring
+              creative technology, resources and events to the university
+              community.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- MEITU -->
+        <article class="experience-item">
+
+          <div>
+            <p class="year">
+              2026 — PRESENT
+            </p>
+
+            <h3>
+              Meitu
+            </h3>
+          </div>
+
+          <div>
+            <h4>
+              Global Campus Ambassador · Product & Analysis
+            </h4>
+
+            <p>
+              Researching digital and campus trends, organising findings
+              and contributing to product-related projects in an
+              international environment.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- WOMEN IN STEM -->
+        <article class="experience-item">
+
+          <div>
+            <p class="year">
+              2026 — PRESENT
+            </p>
+
+            <h3>
+              Women in STEM
+            </h3>
+          </div>
+
+          <div>
+            <h4>
+              President · University of Westminster
+            </h4>
+
+            <p>
+              Leading the society, organising events and initiatives and
+              creating opportunities for students to connect across STEM.
+            </p>
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+      <p class="section-label">
+        03 / EDUCATION
+      </p>
+
+      <h2>
+        Psychology & human behaviour.
+      </h2>
+
+      <div class="education-card">
+
+        <p class="year">
+          2025 — 2028
+        </p>
+
+        <h3>
+          University of Westminster
+        </h3>
+
+        <h4>
+          BSc (Hons) Psychology
+        </h4>
+
+        <p>
+          Studying psychology with experience in quantitative research,
+          statistics, experimental methods and psychological research.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills">
+
+      <p class="section-label">
+        04 / SKILLS
+      </p>
+
+      <div class="section-grid">
+
+        <h2>
+          Things I'm<br>
+          learning & using.
+        </h2>
+
+        <div class="skill-list">
+          <span>Research</span>
+          <span>Data Analysis</span>
+          <span>Statistics</span>
+          <span>JASP</span>
+          <span>SPSS</span>
+          <span>R</span>
+          <span>Figma</span>
+          <span>Adobe Creative Tools</span>
+          <span>Interviews & Surveys</span>
+          <span>Qualitative Analysis</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+      <p class="section-label">
+        05 / CONTACT
+      </p>
+
+      <h2>
+        Let's connect.
+      </h2>
+
+      <p>
+        I'm always interested in learning, meeting new people and
+        exploring opportunities across research and technology.
+      </p>
+
+      <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        LinkedIn ↗
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Leyla Safiye Karatay
+    </p>
+
+    <p>
+      Psychology · Research · Technology
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
