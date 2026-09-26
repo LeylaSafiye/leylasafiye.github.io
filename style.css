@@ -139,27 +139,25 @@ section {
   object-fit: cover;
   object-position: center;
 
-  /* Large soft fade on every edge + corner */
   -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 35%,
-    black 48%,
-    rgba(0, 0, 0, 0.9) 58%,
-    rgba(0, 0, 0, 0.6) 70%,
-    rgba(0, 0, 0, 0.25) 82%,
+    ellipse 75% 75% at center,
+    #000 25%,
+    #000 40%,
+    rgba(0, 0, 0, 0.85) 52%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.2) 78%,
     transparent 100%
   );
 
   mask-image: radial-gradient(
-    ellipse at center,
-    black 35%,
-    black 48%,
-    rgba(0, 0, 0, 0.9) 58%,
-    rgba(0, 0, 0, 0.6) 70%,
-    rgba(0, 0, 0, 0.25) 82%,
+    ellipse 75% 75% at center,
+    #000 25%,
+    #000 40%,
+    rgba(0, 0, 0, 0.85) 52%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.2) 78%,
     transparent 100%
   );
-}
 }
 
 
