@@ -1,30 +1,25 @@
-/* -----------------------------------------
+/* =========================================
    LEYLA SAFIYE KARATAY
-   PORTFOLIO STYLES
------------------------------------------ */
-
-
-/* FONTS */
+   PORTFOLIO
+========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
 
 
-/* COLOURS */
+/* ---------- COLOURS ---------- */
 
 :root {
-  --background: #f7f6f2;
+  --bg: #f7f6f2;
   --text: #171717;
-  --secondary: #68645f;
-  --muted: #8b8781;
-  --line: #dedbd5;
-
-  /* Very subtle dusty rose */
-  --accent: #b87982;
-  --accent-soft: #eee3e2;
+  --secondary: #625f5b;
+  --muted: #8a8782;
+  --line: #ddd9d3;
+  --rose: #c58d94;
+  --rose-soft: #f0e5e5;
 }
 
 
-/* RESET */
+/* ---------- RESET ---------- */
 
 * {
   box-sizing: border-box;
@@ -37,44 +32,39 @@ html {
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
-  background: var(--background);
+  background: var(--bg);
   color: var(--text);
+
+  font-family: "DM Sans", sans-serif;
   line-height: 1.6;
+
   -webkit-font-smoothing: antialiased;
 }
 
 
-/* LINKS */
-
-a {
-  color: inherit;
-}
-
-
-/* NAVIGATION */
+/* ---------- NAVIGATION ---------- */
 
 nav {
-  max-width: 1200px;
+  width: min(1200px, calc(100% - 80px));
   margin: 0 auto;
-  padding: 32px 40px;
+  padding: 32px 0;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   color: var(--text);
-  font-size: 18px;
+
+  font-size: 17px;
   font-weight: 600;
-  letter-spacing: -0.02em;
+
   text-decoration: none;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 32px;
 }
 
@@ -82,10 +72,9 @@ nav {
   position: relative;
 
   color: var(--text);
+
   font-size: 14px;
   text-decoration: none;
-
-  transition: opacity 0.2s ease;
 }
 
 .nav-links a::after {
@@ -98,7 +87,7 @@ nav {
   width: 0;
   height: 1px;
 
-  background: var(--accent);
+  background: var(--rose);
 
   transition: width 0.25s ease;
 }
@@ -108,21 +97,23 @@ nav {
 }
 
 
-/* MAIN LAYOUT */
+/* ---------- GENERAL LAYOUT ---------- */
 
 main {
-  max-width: 1200px;
+  width: min(1200px, calc(100% - 80px));
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 section {
-  padding: 120px 0;
+  padding: 110px 0;
+
   border-bottom: 1px solid var(--line);
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
   min-height: 82vh;
@@ -135,10 +126,12 @@ section {
   width: 100%;
 
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
 
-  gap: 70px;
+  /* More room for your name, enough room for photo */
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+
   align-items: center;
+  gap: 65px;
 }
 
 .hero-text {
@@ -146,7 +139,7 @@ section {
 }
 
 
-/* SMALL LABELS */
+/* Small text above your name */
 
 .eyebrow,
 .section-label,
@@ -162,51 +155,45 @@ section {
 
 .eyebrow {
   display: inline-block;
-
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--accent);
 }
 
 
-/* HERO TITLE */
+/* Main name */
 
 .hero h1 {
-  margin: 25px 0 40px;
+  margin: 24px 0 38px;
 
   font-family: "Manrope", sans-serif;
 
-  font-size: clamp(65px, 9vw, 125px);
+  font-size: clamp(65px, 8vw, 118px);
   font-weight: 500;
 
-  letter-spacing: -0.07em;
-  line-height: 0.9;
+  letter-spacing: -0.065em;
+  line-height: 0.92;
 }
 
 
-/* HERO INTRO */
+/* Introduction */
 
 .intro {
-  max-width: 560px;
+  max-width: 570px;
 
   color: var(--secondary);
 
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.65;
 }
 
 
-/* HERO LINKS */
+/* Hero buttons */
 
 .hero-links {
-  margin-top: 42px;
+  margin-top: 40px;
 
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
 }
-
-
-/* MAIN BUTTON */
 
 .button {
   display: inline-block;
@@ -237,9 +224,6 @@ section {
   transform: translateY(-2px);
 }
 
-
-/* SECONDARY LINK */
-
 .text-link {
   position: relative;
 
@@ -261,7 +245,7 @@ section {
   width: 100%;
   height: 1px;
 
-  background: var(--accent);
+  background: var(--rose);
 
   transform: scaleX(0);
   transform-origin: right;
@@ -275,32 +259,53 @@ section {
 }
 
 
-/* PROFILE PHOTO */
+/* =========================================
+   PROFILE PHOTO
+========================================= */
+
+/*
+   IMPORTANT:
+   Your photo already has a good composition.
+
+   No fixed height.
+   No object-fit: cover.
+   No mask.
+   No fade.
+
+   This means the FULL original photograph is shown.
+*/
 
 .hero-photo {
   width: 100%;
-  max-width: 390px;
+  max-width: 440px;
 
   justify-self: end;
 }
 
 .hero-photo img {
   width: 100%;
-  height: 500px;
+  height: auto;
 
   display: block;
 
-  object-fit: cover;
-  object-position: center;
+  /* Keeps the original photo proportions */
+  aspect-ratio: auto;
 
-  border-radius: 2px;
+  /* Small editorial-style corners */
+  border-radius: 10px;
+
+  /* Extremely subtle depth */
+  box-shadow:
+    0 18px 50px rgba(23, 23, 23, 0.08);
 }
 
 
-/* SECTION HEADINGS */
+/* =========================================
+   SECTION TITLES
+========================================= */
 
 .section-label {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 section h2 {
@@ -316,10 +321,13 @@ section h2 {
 }
 
 
-/* ABOUT */
+/* =========================================
+   ABOUT
+========================================= */
 
 .section-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   gap: 90px;
@@ -339,7 +347,9 @@ section h2 {
 }
 
 
-/* EXPERIENCE */
+/* =========================================
+   EXPERIENCE
+========================================= */
 
 .experience-list {
   border-top: 1px solid var(--line);
@@ -349,17 +359,12 @@ section h2 {
   padding: 45px 0;
 
   display: grid;
+
   grid-template-columns: 0.8fr 1.2fr;
 
   gap: 80px;
 
   border-bottom: 1px solid var(--line);
-
-  transition: padding 0.25s ease;
-}
-
-.experience-item:hover {
-  padding-left: 10px;
 }
 
 .experience-item h3,
@@ -378,8 +383,6 @@ section h2 {
 .education-card h4 {
   margin-bottom: 15px;
 
-  color: var(--text);
-
   font-size: 17px;
   font-weight: 500;
 }
@@ -392,7 +395,9 @@ section h2 {
 }
 
 
-/* EDUCATION */
+/* =========================================
+   EDUCATION
+========================================= */
 
 .education-card {
   padding: 45px 0;
@@ -402,24 +407,22 @@ section h2 {
 }
 
 
-/* SKILLS + LANGUAGES */
+/* =========================================
+   SKILLS + LANGUAGES
+========================================= */
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 10px;
-
-  align-content: flex-start;
+  gap: 11px;
 }
 
 .skill-list span {
   padding: 9px 17px;
 
-  border: 1px solid #cbc7c1;
+  border: 1px solid #c9c6c0;
   border-radius: 100px;
-
-  background: transparent;
 
   color: var(--secondary);
 
@@ -427,18 +430,18 @@ section h2 {
 
   transition:
     background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .skill-list span:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent-soft);
-  color: var(--text);
+  background: var(--rose-soft);
+  border-color: var(--rose-soft);
 }
 
 
-/* CONTACT */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact {
   min-height: 65vh;
@@ -456,13 +459,15 @@ section h2 {
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-  max-width: 1200px;
+  width: min(1200px, calc(100% - 80px));
 
   margin: 0 auto;
-  padding: 35px 40px 50px;
+  padding: 35px 0 50px;
 
   display: flex;
   justify-content: space-between;
@@ -473,18 +478,38 @@ footer {
 }
 
 
-/* -----------------------------------------
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero-content {
+    grid-template-columns: 1fr 0.75fr;
+
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(62px, 9vw, 90px);
+  }
+
+  .hero-photo {
+    max-width: 380px;
+  }
+}
+
+
+/* =========================================
    MOBILE
------------------------------------------ */
+========================================= */
 
 @media (max-width: 700px) {
 
   nav {
-    padding: 24px 20px;
-  }
+    width: calc(100% - 40px);
 
-  .logo {
-    font-size: 17px;
+    padding: 24px 0;
   }
 
   .nav-links {
@@ -495,12 +520,14 @@ footer {
     font-size: 12px;
   }
 
+
   main {
-    padding: 0 20px;
+    width: calc(100% - 40px);
   }
 
+
   section {
-    padding: 80px 0;
+    padding: 78px 0;
   }
 
 
@@ -508,17 +535,20 @@ footer {
 
   .hero {
     min-height: auto;
-    padding-top: 70px;
+
+    padding-top: 65px;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
 
-    gap: 45px;
+    gap: 48px;
   }
 
   .hero h1 {
-    font-size: clamp(58px, 17vw, 75px);
+    font-size: clamp(58px, 17vw, 76px);
+
+    margin-bottom: 30px;
   }
 
   .intro {
@@ -526,6 +556,8 @@ footer {
   }
 
   .hero-links {
+    margin-top: 32px;
+
     flex-direction: column;
     align-items: flex-start;
 
@@ -539,30 +571,24 @@ footer {
     width: 100%;
     max-width: 100%;
 
-    justify-self: start;
+    justify-self: stretch;
   }
 
   .hero-photo img {
     width: 100%;
     height: auto;
 
-    max-height: 600px;
-
-    object-fit: cover;
+    border-radius: 8px;
   }
 
 
-  /* CONTENT */
+  /* OTHER SECTIONS */
 
   .section-grid,
   .experience-item {
     grid-template-columns: 1fr;
 
     gap: 30px;
-  }
-
-  .experience-item:hover {
-    padding-left: 0;
   }
 
   section h2 {
@@ -573,7 +599,9 @@ footer {
   /* FOOTER */
 
   footer {
-    padding: 30px 20px;
+    width: calc(100% - 40px);
+
+    padding: 30px 0;
 
     flex-direction: column;
 
